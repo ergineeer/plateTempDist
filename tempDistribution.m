@@ -4,7 +4,7 @@ clear
 clc
 
 %% Inputs
-intervalNumb = 30; % Number of total intervals
+intervalNumb = 30; % Number of Intervals
 edgeTemperatures = [60 220 120 180]; % Edge Temperatures - Constant
 
 %% Adjust Edge Temperatures
@@ -54,7 +54,7 @@ constantVals(size(tempUnknownValsIdx),:) = constantVals(size(tempUnknownValsIdx)
 constantVals(:,size(tempUnknownValsIdx)) = constantVals(:,size(tempUnknownValsIdx)) + edgeTemperatures(1,4);
 constantVals = reshape(transpose(constantVals),1,length(constantVals)^2);
 
-%% Gauss-Jordan 
+%% Gauss-Jordan Method
 augmentedCoefMatrix(:,inSqr+1) =  transpose(constantVals);
 augmentedCoefMatrixEchelon = rref(augmentedCoefMatrix); % Reduced Raw Echelon Form
 xVals_1 = reshape(augmentedCoefMatrixEchelon(:,1+inSqr),intervalNumb-2,intervalNumb-2);
