@@ -9,4 +9,17 @@ A set of linear equations is constructed to be used in numerical methods. Number
 Number of parameters is ~4k if interval number is 10, ~100k if interval number is 20, ~600k if interval number is 30, ~2m if interval number is 40. Higher interval numbers require higher computational capabilities. 
 
 # Methods
-Once the system for linear equations is created, it is now possible to apply numberical methods such as Gauss-Jordan Method and Matrix Inversion Method. 
+Once the system for linear equations and solutions is created, it is now possible to use numberical methods such as Gauss-Jordan Method and Matrix Inversion Method. 
+
+Gauss-Jordan method requires augmented matrix of coefficient matrix and solutions vector. Taking the reduced row echelon form of this augmented matrix should yield the unknown values which are aimed to be determined. 
+
+In matrix inversion method, coefficient matrix should be a square matrix and non-singular. If these conditions are met, unknown values can be calculates by the formula of X = inv(A)*B.
+
+Process can be completed by faster and more efficient methods.
+
+# Testing
+Code is tested on MATLAB and Octave, using interval number of 50 and output visuals are provided below. After the 40 intervals, elapsed time is getting much greater than previous numbers. 
+
+![Methods](https://user-images.githubusercontent.com/80001281/110222048-a753e780-7ee0-11eb-8d25-2dd452a7f3c5.png)
+
+Thanks.
