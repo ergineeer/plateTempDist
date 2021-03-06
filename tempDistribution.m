@@ -14,7 +14,7 @@ initialMatrix(:,1) = edgeTemperatures(1,2);
 initialMatrix(intervalNumb,:) = edgeTemperatures(1,3);
 initialMatrix(:,intervalNumb) = edgeTemperatures(1,4);
 
-%% System of Linear Equations and Solutions
+%% Constructing the System of Linear Equations and Solutions
 inSqr = (intervalNumb-2)^2; 
 augmentedCoefMatrix = zeros(inSqr,inSqr+1);
 unknownValsIdx = zeros(size(initialMatrix));
