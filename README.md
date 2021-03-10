@@ -22,4 +22,7 @@ Code is tested on MATLAB and Octave, using interval number of 50 and output visu
 
 ![Methods](https://user-images.githubusercontent.com/80001281/110222048-a753e780-7ee0-11eb-8d25-2dd452a7f3c5.png)
 
+# Further Improvements
+Shape of the plate should not be limited by being a square or rectangular. Condition for numerical solution in this case is that coefficient matrix is supposed to be a non-singular, square matrix. This condition can be satisfied for other polygon shapes of plate.
+
 Thanks.
